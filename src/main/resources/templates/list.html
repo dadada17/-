@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div>총 post_count 수 :<span th:text="${#lists.size(jsons)}"></span></div>
+<div>post_count의 총합 :<span></span></div>
+
+<div th:each="i:${jsons}">
+    <div>
+        <h4 th:text="${i.user_id}"></h4>
+        <h4 th:text="${i.user_name}"></h4>
+        <h4 th:text="${i.post_count}"></h4>
+    </div>
+</div>
+</body>
+</html>
