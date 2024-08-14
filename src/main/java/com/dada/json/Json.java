@@ -1,9 +1,6 @@
 package com.dada.json;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 //db에 json파일 저장하고 싶을 때 테이블 생성 시 컬럼 맞쳐주고
@@ -17,7 +14,7 @@ import lombok.Data;
 
 
 @Entity
-@Data  //lombok 어노태이션
+@Data//lombok 어노태이션
 public class Json {
 
     @Id

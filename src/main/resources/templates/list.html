@@ -9,7 +9,7 @@
 </head>
 <body>
 <div>총 post_count 수 :<span th:text="${#lists.size(jsons)}"></span></div>
-<div>post_count의 총합 :<span></span></div>
+<div>post_count의 총합 :<span th:text="${totalPostCount}"></span></div>
 
 <div th:each="i:${jsons}">
     <div>

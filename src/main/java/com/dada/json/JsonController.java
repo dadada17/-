@@ -12,15 +12,18 @@ import java.util.List;
 public class JsonController {
 
     private final JsonRepository jsonRepository;
-
+    private final JsonService jsonService;
 
     @GetMapping("/sum")
-    String list (Model model) {
+    String list(Model model) {
         List<Json> jsons = jsonRepository.findAll();
-
         model.addAttribute("jsons", jsons);
+
+        Integer totalPostCount = jsonService.totalPostCount();
+        model.addAttribute("totalPostCount", totalPostCount);
 
         return "list.html";
     }
+
 }
 
